@@ -1,6 +1,6 @@
 <template>
     <div class="app">
-        <weather-search
+      <weather-search
           v-model="city.name"
           @update="updateAll"
          />
@@ -16,7 +16,7 @@
           Show forecast
         </app-button>
 
-         <app-dialog :show="dialogVisible">
+         <app-dialog v-model:show="dialogVisible">
           <weather-forecast
             :city="city" 
             :forecast="forecast" 
